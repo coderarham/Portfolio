@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -58,8 +59,29 @@ const Contact = () => {
     }
 
     try {
-      // Simulate form submission (replace with actual EmailJS or API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'New Contact Form Message',
+          message: formData.message
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      // Send auto-reply
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       
       setFormStatus({
         type: 'success',
@@ -74,6 +96,7 @@ const Contact = () => {
         message: ''
       });
     } catch (error) {
+      console.error('Email Error:', error);
       setFormStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
