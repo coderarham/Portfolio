@@ -75,7 +75,7 @@ const Projects = () => {
       tags: ['React', 'TailwindCSS', 'Framer Motion'],
       category: 'frontend',
       demoUrl: '#',
-      codeUrl: '#',
+      codeUrl: 'https://github.com/coderarham/Portfolio',
       featured: false
     }
   ];
