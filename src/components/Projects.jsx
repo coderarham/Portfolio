@@ -52,7 +52,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
       tags: ['Node.js', 'Express', 'MongoDB', 'JWT'],
       category: 'backend',
-      demoUrl: '#',
+      demoUrl: 'https://idyllic-cuchufli-0d2ae9.netlify.app/',
       codeUrl: 'https://github.com/coderarham/My-Tasks',
       featured: false
     },
