@@ -75,8 +75,8 @@ const Hero = () => {
                 View Projects
               </motion.button>
               <motion.a
-                href="/MD_ARHAM_Resume.pdf"
-                download="MD_ARHAM_Resume.pdf"
+                href="/Md Arham Resume.pdf"
+                download="/Md Arham Resume.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary flex items-center justify-center gap-2"
