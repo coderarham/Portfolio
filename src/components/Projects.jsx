@@ -30,19 +30,19 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
       tags: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
       category: 'fullstack',
-      demoUrl: '#',
-      codeUrl: '#',
+      demoUrl: 'http://localhost:5001/',
+      codeUrl: 'https://github.com/coderarham/E-Commerce-Website',
       featured: true
     },
     {
       id: 3,
-      title: 'Customer Segmentation Analysis',
-      description: 'Data science project analyzing customer behavior patterns using clustering algorithms and creating targeted marketing strategies.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      tags: ['Python', 'K-Means', 'Matplotlib', 'Seaborn'],
-      category: 'datascience',
-      demoUrl: '#',
-      codeUrl: '#',
+      title: 'Hospital-Management-System(HMS)',
+      description: 'A comprehensive web-based Hospital Management System built with Flask and SQLite.',
+      image: 'https://www.doctorsapp.in/uploads/blog_image/images/280325_6750_blog_image.jpg',
+      tags: ['Python Flask', 'SQLite', 'HTML', 'JavaScript', 'Bootstrap 5'],
+      category: 'Full Stack',
+      demoUrl: 'https://hospital-management-system-hms-9m6t.onrender.com/',
+      codeUrl: 'https://github.com/coderarham/Hospital-Management-System--HMS-',
       featured: false
     },
     {
@@ -74,7 +74,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
       tags: ['React', 'TailwindCSS', 'Framer Motion'],
       category: 'frontend',
-      demoUrl: '#',
+      demoUrl: 'https://glittering-kitsune-39606e.netlify.app/',
       codeUrl: 'https://github.com/coderarham/Portfolio',
       featured: false
     }
